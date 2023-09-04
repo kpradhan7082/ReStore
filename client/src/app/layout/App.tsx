@@ -4,6 +4,7 @@ import { Container, CssBaseline, ThemeProvider, createTheme } from '@mui/materia
 import Header from './Header';
 import { purple, green } from '@mui/material/colors';
 import { useState } from 'react';
+import { Outlet } from 'react-router-dom';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -26,7 +27,7 @@ function App() {
           darkMode={darkMode}
           handleThemeChange={()=>setDarkMode(!darkMode)} />
         <Container>
-          <Catalog />
+          <Outlet />
         </Container>
       </ThemeProvider>
     </>
