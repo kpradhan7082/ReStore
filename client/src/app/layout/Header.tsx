@@ -43,7 +43,7 @@ export default function Header({ darkMode, handleThemeChange }: Props) {
                 </Box>
                 <List sx={{ display: 'flex' }}>
                     {midLinks.map(({ title, path }) => (
-                        <ListItem sx={navStyles} to={path} component={NavLink}>
+                        <ListItem key={path} sx={navStyles} to={path} component={NavLink}>
                             {title.toUpperCase()}
                         </ListItem>
                     ))}
@@ -56,7 +56,7 @@ export default function Header({ darkMode, handleThemeChange }: Props) {
                     </IconButton>
                     <List sx={{ display: 'flex' }}>
                         {rightLinks.map(({ title, path }) => (
-                            <ListItem sx={navStyles} to={path} component={NavLink}>{title.toUpperCase()}</ListItem>
+                            <ListItem key={path} sx={navStyles} to={path} component={NavLink}>{title.toUpperCase()}</ListItem>
                         ))}
                     </List>
                 </Box>
