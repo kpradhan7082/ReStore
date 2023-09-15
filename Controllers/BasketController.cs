@@ -118,6 +118,7 @@ namespace API.Controllers
                     Description = item.Product.Description,
                     Price = item.Product.Price,
                     PictureUrl = item.Product.PictureUrl,
+                    ProductId=item.ProductId,
                     Brand = item.Product.Brand,
                     Type = item.Product.Type,
                     Quantity = item.Quantity
